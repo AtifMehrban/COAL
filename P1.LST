@@ -1,0 +1,15 @@
+     1                                  org 0x100
+     2 00000000 A1[1700]                mov ax,[num1]
+     3                                  ;mov [num1],[num2]
+     4 00000003 8B1E[1900]              mov bx,[num2]
+     5 00000007 01D8                    add ax,bx
+     6 00000009 8B1E[1B00]              mov bx,[num3]
+     7 0000000D 01D8                    add ax,bx
+     8 0000000F A3[1D00]                mov [num4], ax
+     9 00000012 B8004C                  mov ax,0x4c00
+    10 00000015 CD21                    int 0x21
+    11                                  
+    12 00000017 0500                    num1: dw  5
+    13 00000019 0A00                    num2: dw   10
+    14 0000001B 0F00                    num3: dw  15
+    15 0000001D 0000                    num4: dw   0
